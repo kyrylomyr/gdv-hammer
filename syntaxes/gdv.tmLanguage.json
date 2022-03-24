@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "GDV",
+  "scopeName": "text.gdv",
+  "patterns": [
+    { "include": "#header" },
+    { "include": "#record.01XX" },
+    { "include": "#record.02XX" },
+    { "include": "#record.0XXX" },
+    { "include": "#footer" }
+  ],
+  "repository": {
+    "header": {
+      "name": "invalid",
+      "match": "^0001(.{5})(.{30}).*$",
+      "captures": {
+        "1": { "name": "string" },
+        "2": { "name": "comment" }
+      }
+    },
+    "record.01XX": {
+      "name": "keyword",
+      "match": "^01..(.{5}).(.{3}).*$",
+      "captures": {
+        "1": { "name": "string" },
+        "2": { "name": "string.regexp" }
+      }
+    },
+    "record.02XX": {
+      "match": "^02..(.{5}).(.{3}).*$",
+      "captures": {
+        "1": { "name": "string" },
+        "2": { "name": "string.regexp" }
+      }
+    },
+    "record.0XXX": {
+      "name": "comment",
+      "match": "^0...(.{5}).(.{3}).*$",
+      "captures": {
+        "1": { "name": "string" },
+        "2": { "name": "string.regexp" }
+      }
+    },
+    "footer": {
+      "name": "string.regexp",
+      "match": "^9999.*$"
+    }
+  }
+}
