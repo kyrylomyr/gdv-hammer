@@ -42,7 +42,7 @@
       }
     },
     "footer": {
-      "name": "string.regexp",
+      "name": "invalid",
       "match": "^9999.*$"
     }
   }
