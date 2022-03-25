@@ -24,11 +24,6 @@
     "gdv"
   ],
   "main": "./src/extension.js",
-  "activationEvents": [
-    "onCommand:extension.markField",
-    "onCommand:extension.clearMark",
-    "onCommand:extension.anonymize"
-  ],
   "contributes": {
     "languages": [
       {
