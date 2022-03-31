@@ -16,6 +16,13 @@ const fields = [
     position: 104,
     length: 30,
     satznummer: "1"
+  },
+  {
+    label: "Allgemeine Daten - 0200 Allgemeiner Vertragsteil - Satz 1 - Personen-/Kundennummer des Vermittlers",
+    satzart: "0200",
+    position: 176,
+    length: 17,
+    satznummer: "1"
   }
 ];
 
