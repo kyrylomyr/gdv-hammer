@@ -19,7 +19,6 @@
       }
     },
     "record.01XX": {
-      "name": "keyword",
       "match": "^01..(.{5}).(.{3}).*$",
       "captures": {
         "1": { "name": "string" },
@@ -27,6 +26,7 @@
       }
     },
     "record.02XX": {
+      "name": "keyword",
       "match": "^02..(.{5}).(.{3}).*$",
       "captures": {
         "1": { "name": "string" },
