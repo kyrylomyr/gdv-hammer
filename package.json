@@ -2,7 +2,7 @@
   "name": "gdv-hammer",
   "displayName": "GDV Hammer",
   "description": "The GDV language support",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "publisher": "kyrylomyr",
   "author": {
     "name": "Kyrylo Myroshnychenko",
@@ -24,13 +24,14 @@
   "keywords": [
     "gdv"
   ],
-  "preview": true,
+  "preview": false,
   "icon": "hammer.png",
   "main": "./src/extension.js",
   "activationEvents": [
     "onCommand:extension.markField",
     "onCommand:extension.clearMark",
-    "onCommand:extension.anonymize"
+    "onCommand:extension.anonymize",
+    "onCommand:extension.resetCache"
   ],
   "contributes": {
     "languages": [
@@ -56,20 +57,25 @@
     "commands": [
       {
         "command": "extension.markField",
-        "title": "GDV: Mark Field"
+        "title": "GDV: Mark field"
       },
       {
         "command": "extension.clearMark",
-        "title": "GDV: Clear Mark"
+        "title": "GDV: Clear marks"
       },
       {
         "command": "extension.anonymize",
         "title": "GDV: Anonymize"
+      },
+      {
+        "command": "extension.resetCache",
+        "title": "GDV: Reset cache"
       }
     ]
   },
   "dependencies": {
     "axios": "^0.26.1",
+    "jsdom": "^19.0.0",
     "randomstring": "^1.2.2"
   }
 }
