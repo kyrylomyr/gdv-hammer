@@ -1,7 +1,7 @@
 {
   "name": "gdv-hammer",
   "displayName": "GDV Hammer",
-  "description": "The GDV language support",
+  "description": "The support of the GDV documents.",
   "version": "1.0.0",
   "publisher": "kyrylomyr",
   "author": {
