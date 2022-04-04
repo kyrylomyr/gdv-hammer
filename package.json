@@ -2,7 +2,7 @@
   "name": "gdv-hammer",
   "displayName": "GDV Hammer",
   "description": "The support of the GDV documents.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "kyrylomyr",
   "author": {
     "name": "Kyrylo Myroshnychenko",
@@ -30,6 +30,7 @@
   "activationEvents": [
     "onCommand:extension.markField",
     "onCommand:extension.clearMark",
+    "onCommand:extension.detectField",
     "onCommand:extension.anonymize",
     "onCommand:extension.resetCache"
   ],
@@ -64,8 +65,12 @@
         "title": "GDV: Clear marks"
       },
       {
+        "command": "extension.detectField",
+        "title": "GDV: Detect field under cursor"
+      },
+      {
         "command": "extension.anonymize",
-        "title": "GDV: Anonymize"
+        "title": "GDV: Anonymize document"
       },
       {
         "command": "extension.resetCache",
