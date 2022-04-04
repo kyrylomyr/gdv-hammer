@@ -83,6 +83,8 @@ const extractFields = (html, fieldsDict) => {
 
   const fieldsTable = doc.querySelector("body > table > tbody > tr > td:nth-child(3) > table:nth-child(5) > tbody");
 
+  // BUG: Satznummer doesn't always start from 1.
+  // BUG: Sometimes there are multiple Satz, but Satznummer is not present.
   let satznummer = 0;
   for (let i = 0; i < fieldsTable.children.length; i++) {
     const tr = fieldsTable.children[i];
