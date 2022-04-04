@@ -13,24 +13,24 @@ const markFieldCommand = async (context) => {
 };
 
 const markField = (field) => {
-  const activeEditor = vscode.window.activeTextEditor;
-  if (!activeEditor) {
+  const editor = vscode.window.activeTextEditor;
+  if (!editor) {
     return;
   }
 
   const regex = getRegex(field);
-  const text = activeEditor.document.getText();
+  const text = editor.document.getText();
 
   const decorations = [];
   let match;
   while ((match = regex.exec(text)) !== null) {
-    const startPos = activeEditor.document.positionAt(match.index + match[1].length);
-    const endPos = activeEditor.document.positionAt(match.index + match[1].length + match[2].length);
+    const startPos = editor.document.positionAt(match.index + match[1].length);
+    const endPos = editor.document.positionAt(match.index + match[1].length + match[2].length);
     const decoration = { range: new vscode.Range(startPos, endPos) };
     decorations.push(decoration);
   }
 
-  activeEditor.setDecorations(fieldDecorationType, decorations);
+  editor.setDecorations(fieldDecorationType, decorations);
 };
 
 const getRegex = (field) => {
