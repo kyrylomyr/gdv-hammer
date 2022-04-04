@@ -85,6 +85,7 @@ const extractFields = (html, fieldsDict) => {
 
   // BUG: Satznummer doesn't always start from 1.
   // BUG: Sometimes there are multiple Satz, but Satznummer is not present.
+  // BUG: Sometimes Sparte is in the Satzart, but is not used in the line. See Satzart: 0220.580.01.
   let satznummer = 0;
   for (let i = 0; i < fieldsTable.children.length; i++) {
     const tr = fieldsTable.children[i];
