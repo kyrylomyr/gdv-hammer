@@ -105,7 +105,7 @@ const extractFields = (html, fieldsDict) => {
         const position = Number(fieldPosition);
         const length = Number(fieldLength);
         const field = {
-          label: `${satzart}.${satznummer} - ${kapitel} / ${bezeichnung} - ${position}-${length} / ${fieldName}`,
+          label: `${satzart}#${satznummer} - ${kapitel} / ${bezeichnung} - ${position}-${length} / ${fieldName}`,
           satzart: satzart,
           position: position,
           length: length,
